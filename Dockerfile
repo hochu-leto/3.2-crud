@@ -5,5 +5,6 @@ WORKDIR /stocks_products
 RUN pip install -r /stocks_products/requirements.txt
 RUN python3 /stocks_products/manage.py makemigrations
 RUN python3 /stocks_products/manage.py migrate
-CMD ["fuser", "8000/tcp"]
-CMD ["python3", "/stocks_products/manage.py", "runserver"]
+
+CMD ["python", "print", "'runserver'"]
+# CMD ["python", "/stocks_products/manage.py", "runserver"]
