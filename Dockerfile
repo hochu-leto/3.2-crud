@@ -6,5 +6,4 @@ RUN pip install -r /stocks_products/requirements.txt
 RUN python3 /stocks_products/manage.py makemigrations
 RUN python3 /stocks_products/manage.py migrate
 
-CMD ["python", "print", "'runserver'"]
-# CMD ["python", "/stocks_products/manage.py", "runserver"]
+CMD ["python", "/stocks_products/manage.py", "runserver", "0.0.0.0:8000"]
